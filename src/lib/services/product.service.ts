@@ -1,6 +1,7 @@
 import { ProductsResponse } from '@/types/product';
+import { EnvConfig } from '@/lib/config/env';
 
-const API_BASE_URL = 'https://dummyjson.com';
+const API_BASE_URL = EnvConfig.apiBaseUrl;
 
 export interface IProductService {
   fetchProducts(limit: number, skip: number): Promise<ProductsResponse>;
