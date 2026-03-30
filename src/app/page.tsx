@@ -1,6 +1,9 @@
+import { EnvConfig } from '@/lib/config/env';
 import Link from 'next/link';
 
 export default function Home() {
+  const envConfig = EnvConfig;
+  console.log(`API_BASE_URL - ${envConfig.apiBaseUrl}`, `IMAGE_DOMAIN - ${envConfig.imageDomain}`);
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="text-center">

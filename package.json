@@ -4,7 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:qa": "dotenv -e .env.qa -- next dev",
+    "dev:stage": "dotenv -e .env.stage -- next dev",
     "build": "next build",
+    "build:qa": "dotenv -e .env.qa -- next build",
+    "build:stage": "dotenv -e .env.stage -- next build",
+    "build:prod": "dotenv -e .env.production -- next build",
     "start": "next start",
     "lint": "eslint"
   },
@@ -15,6 +20,7 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
+    "dotenv-cli": "^8",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
